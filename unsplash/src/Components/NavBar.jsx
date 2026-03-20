@@ -5,7 +5,7 @@ const NavBar = () => {
   return (
     <>
       <div className="flex px-6 justify-between items-center">
-        <div className="bg-gray-200 px-3 py-1.5 flex items-center justify-between gap-x-2 rounded-full w-[75%]">
+       <div className="bg-gray-200 px-3 py-1.5 flex items-center justify-between gap-x-2 rounded-full w-[75%]">
           <Search className="w-5 h-5 text-gray-600" strokeWidth={2.5} />
           <input
             type="text"
@@ -13,7 +13,7 @@ const NavBar = () => {
             className="w-full focus:outline-none"
           />
           <Focus className="w-5 h-5 text-gray-600" strokeWidth={2.5} />
-        </div>
+        </div >
 
         <div className="flex justify-between items-center w-[25%] text-sm px-6">
           <h1 className="font-bold">Get Unplash+</h1>
