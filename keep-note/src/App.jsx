@@ -46,16 +46,16 @@ const App = () => {
 
 
     {/* div for show all task */}
-     <div className='lg:w-1/2 w-full h-screen lg:border-l-2 border-dashed border-black max-lg:border-t-4 bg-gray-200 flex flex-wrap items-center justify-center p-6 gap-6 ovrflow-auto'>
+     <div className='lg:w-1/2 w-full h-screen lg:border-l-2 border-dashed border-black max-lg:border-t-4 bg-gray-200 flex flex-wrap items-center justify-center p-6 gap-6 overflow-auto'>
      
     {Tasks.map((task, id) => {
       return (
          <div className='w-full max-w-78 h-78 bg-white rounded-4xl shadow-2xl flex items-end justify-center p-3 relative' key={id}>
          <img src="./pngimg.com - pin_PNG76.png" alt="" className='w-15 h-10 absolute z-10 top-2'/>
       <div className='w-full h-58 bg-orange-200 rounded-4xl p-4'>
-        <h1 className='text-3xl font-bold'>{id+1}</h1>
-        <h1 className='text-2xl font-semibold text-center my-1'>{task.Title }</h1>
-        <p className='text-gray-400 font-medium text-xl'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat quibusdam esse commodi.</p>
+        <h1 className='text-5xl font-bold'>{id + 1}</h1>
+        <h1 className='text-4xl font-semibold text-center my-1'>{task.Heading}</h1>
+        <p className='text-gray-400 font-medium text-2xl'>{task.List}</p>
       </div>
      </div>
       )
