@@ -1,36 +1,37 @@
-import React from "react";
-import { Focus, Search, CircleCheck } from "lucide-react";
+import React from 'react'
+import { Focus, Search, CircleCheck} from "lucide-react";
+
 const HeroSection = () => {
   return (
-    <>
-      <section className="flex items-end justify-center  w-full">
-        {/* Introduction */}
-        <div className="w-1/2 overflow-hidden">
-          <h1 className="text-[40px] font-bold ">Unsplash</h1>
-          <p className="my-2 text-[18px] font-normal">
-            The internet&apos;s source for visuals. <br /> Powered by creators
-            evrywhere
-          </p>
-          {/* Searchbar */}
-          <div className="bg-gray-200 px-4 py-3 flex items-center justify-between gap-x-2 rounded-full ">
-            <Search className="w-5 h-5 text-gray-600" strokeWidth={2.5} />
-            <input
-              type="text"
-              placeholder="Search photos and illustrations"
-              className="w-full focus:outline-none"
-            />
-            <Focus className="w-5 h-5 text-gray-600" strokeWidth={2.5} />
-          </div>
+   <>
+   <section className='flex items-end justify-center w-full'>
+    {/* Introduction */}
+    <div className='w-1/2 overflow-hidden px-6'>
+        <h1 className='text-[40px] font-bold'>Unsplash</h1>
+        <p className='my-2 text-[18px] font-normal'>The internet&apos;s source for visuals.
+            <br />
+            Powered by creators everywhere.
+        </p>
+        {/* Searchbar */}
+        <div className="bg-gray-200 px-4 py-3 flex items-center justify-between gap-x-2 rounded-full">
+          <Search className="w-5 h-5 text-gray-600" strokeWidth={2.5} />
+          <input
+            type="text"
+            placeholder="Search photos and illustrations"
+            className="w-full focus:outline-none"
+          />
+          <Focus className="w-5 h-5 text-gray-600" strokeWidth={2.5} />
         </div>
+    </div>
 
-        {/* Card */}
-        <div className="w-1/2 border border-gray-200 ronded-lg px-4 py-6 flex items-center justify-evenly mx-w-2xl ">
-          {/* text and btn */}
-          <div className="w-1/2 flex flex-col justify-end items-start gap-y-25   ">
+      {/* Card  */}
+        <div className="w-1/2 border border-gray-200 rounded-lg px-4 py-6 flex items-center justify-evenly max-w-xl">
+        {/* text and btn */}
+        <div className='w-1/2 flex flex-col justify-end gap-y-25 items-start'>
             {/* text */}
             <div>
-              {/* svg icon */}
-              <svg
+                {/* svg icon */}
+                <svg
                 width="24"
                 height="24"
                 viewBox="0 0 24 24"
@@ -41,45 +42,34 @@ const HeroSection = () => {
                 <desc lang="en-US">Plus sign for Unsplash+</desc>
                 <path d="M11.281 8.3H8.156V3.125L11.281 1v7.3Zm.316 4.05H4.955V7.868L1.5 10.636v4.55h6.656V22h4.713l3.552-2.84h-4.824v-6.81Zm4.24 0v2.835h4.587l2.911-2.834h-7.497Z"></path>
               </svg>
-              <p className="text-[15px] font-semibold leading-normal my-2">
-                Create confidently
+                <p className='text-[15px] font-semibold leading-normal my-2'>Create confidently with
                 <br />
-                enhanced legal protection
+                enchancd legel protection.
               </p>
-              <p className="text-[15px] font-semibold leading-normal text-[#767676] my-2">
+              <p className='text-[15px] font-semibold leading-normal text-[#767676] my-2'>
                 Premium downloads
                 <br />
                 backed by full coverage.
               </p>
-              {/* text */}
+                {/* text */}
             </div>
-            <button className="text-[14px] font-medium text-white bg-black px-3 py-1 rounded-lg">
-              Get Unsplash
-            </button>
-          </div>
+            <button className='text-[14px] font-medium text-white bg-black px-3 py-1 rounded-lg'>Get Unsplash+</button>
+        </div>
 
-          {/* image and chip */}
-          <div className="relative w-1/2">
-            <img
-              src="https://unsplash-assets.imgix.net/modules/legal-protections/photo-1.jpg?w=192&dpr=1&h=257&auto=format&fit=crop&q=60"
-              alt="image1"
-              className="-rotate-6"
-            />
-            <img
-              src="https://unsplash-assets.imgix.net/modules/legal-protections/photo-2.jpg?w=192&dpr=1&h=257&auto=format&fit=crop&q=60"
-              alt="image2"
-              className="absolute top-0 rotate-10 left-6"
-            />
-            {/* chip1 */}
-            <div className="flex items-center justify-center gap-x-1 absolute z-10 top-32 left-18 border border-gray-200 rounded-full px-2 py-1 bg-white font-normal text-[12px]">
-              <CircleCheck fill="green"  className="text-white w-5 h-5 "/>Worry-Free Licence
-            </div>
-            {/* chip2 */}
-            <div className="flex items-center justify-center gap-x-1 absolute z-10 text-[12px] top-52 border border-gray-200 rounded-full px-2 py-1 bg-white">
-              <CircleCheck fill="green" className="text-white w-5 h-5 "/>Cleared for all uses
-            </div>
+        {/* Image and chip */}
+        <div className='relative w-1/2'>
+            <img src="https://unsplash-assets.imgix.net/modules/legal-protections/photo-1.jpg?w=192&dpr=1&h=257&auto=format&fit=crop&q=60" alt="image 1" className='-rotate-6' />
+            <img src="https://unsplash-assets.imgix.net/modules/legal-protections/photo-2.jpg?w=192&dpr=1&h=257&auto=format&fit=crop&q=60" alt="image 2" className='absolute top-0 rotate-10 left-6'/>
+            {/* Chip 1 */}
+            <div className='flex items-center justify-center gap-x-1 absolute z-10 top-32 left-18 border-gray-200 rounded-full px-2 py-1 bg-white font-normal text-[12px]'>
+                <CircleCheck fill='green' className='text-white w-5 h-5'/>Worry-free Licensing
+                </div>
+            {/* Chip 2 */}
+            <div className='flex items-center justify-center gap-x-1 absolute z-10 text-[12px] bg-white border border-gray-200 px-2 py-1 rounded-full top-44 -left-6'>
+                <CircleCheck fill='green' className='text-white w-5 h-5'/>Cleared for all uses
+                </div>
             {/* sign */}
-              <div className="w-42 absolute -bottom-6 right-10">
+          <div className="w-42 absolute -bottom-6 right-10">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -140,11 +130,11 @@ const HeroSection = () => {
                   </defs>
                 </svg>
               </div>
-          </div>
         </div>
-      </section>
-    </>
-  );
-};
+        </div>
+   </section> 
+   </>
+  )
+}
 
-export default HeroSection;
+export default HeroSection

@@ -2,22 +2,44 @@ import React, { useEffect, useState } from "react";
 import { Bookmark, Plus, ArrowDown } from "lucide-react";
 import axios from "axios";
 const Gallery = () => {
-  const [img, setImg] = useState([]);
-// api fetch
+  // api
+    const [img, setImg] = useState([]);
+    const [page, setPage] = useState(1);
+    const [loading, setLoading] = useState(false);
+
   useEffect(() => {
-    try {
       const FetchImg = async () => {
-        let response = await axios.get(
-          "https://picsum.photos/v2/list?page=1&limit=30",
+        if (loading) return
+        setLoading(true);
+      try{
+          let response = await axios.get(
+          `https://picsum.photos/v2/list?page=${page}&limit=30`,
         );
-        console.log(response);
-        setImg(response.data);
-      };
+        setImg((prev)=>[...prev, ...response.data]);
+      } catch (error) {
+        console.log(error)
+      } finally {
+        setLoading(false)
+      }
+      };       
       FetchImg();
-    } catch (error) {
-      console.log(error);
-    }
-  }, []);
+  });
+
+  // scroll
+  useEffect(() => {
+    const handelScroll = () => {
+      if (
+        window.innerHeight + window.scrollY >=
+        document.documentElement.scrollHeight - 300
+      ) {
+        setPage((prev) =>{ prev + 1});
+      }
+    };
+    window.addEventListener("scroll", handelScroll);
+    return ()=> window.removeEventListener("scrool",handelScroll);
+  });
+
+
   return (
     <>
       <section>
